@@ -4,44 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    </script>
-
     <title>Exercice1</title>
 </head>
-
 <body>
-    <div class="col-md">
-        <h1 class="text-center">Exercice 1</h1>
-        <p>
-            Écrire une fonction qui prend 2 nombres en paramètres et qui retourne le résultat de leur
-            multiplication.
+    <h1>Exercice 1</h1>
+    <p>
+        Écrire une fonction qui prend 2 nombres en paramètres et qui retourne le résultat de leur
+        multiplication.
 
-            Créer un formulaire permettant d'entrer deux nombres. Au clic sur un bouton, lancer votre fonction.
-        </p>
-    </div>
+        Créer un formulaire permettant d'entrer deux nombres. Au clic sur un bouton, lancer votre fonction.
+    </p>
+
     <div class="justify-content-center">
         <form action="">
             <input type="number" id="firstNumber"> x
             <input type="number" id="secondNumber"> =
             <input type="number" id="answer">
-            <button id="myButton" type="button" class="btn btn-info">Résultat :</button>
+            <button id="myButton" type="button" readonly>Résultat :</button>
         </form>
     </div>
 
 
     <script>
-        let idFirstNumber = document.getElementById("firstNumber");
-        let idSecondNumber = document.getElementById("secondtNumber");
-        let idAnswer = document.getElementById("answer");
-        let idButton = document.getElementById("myButton");
+        let firstNumber = document.getElementById("firstNumber");
+        let secondNumber = document.getElementById("secondtNumber");
+        let answer = document.getElementById("answer");
+        let button = document.getElementById("myButton");
 
-        function numMultiplication(firstNumber, secondNumber){
-            return idAnswer.value = (firstNumber * secondNumber);
+        function numMultiplication(firstNumber, secondNumber) {
+            return answer.value = (firstNumber * secondNumber);
         }
 
-        button.addEventListener("click", function () {numMultiplication(firstNumber, secondNumber)});
+        button.addEventListener("click", function () {
+            numMultiplication(firstNumber, secondNumber)
+        });
     </script>
 
 
